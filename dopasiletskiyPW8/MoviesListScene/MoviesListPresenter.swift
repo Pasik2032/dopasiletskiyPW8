@@ -9,6 +9,10 @@
 import Foundation
 
 class MoviesListPresenter: ViewToPresenterMoviesListProtocol {
+    func startApp() {
+        interactor?.loadMovies()
+    }
+    
 
     // MARK: Properties
     var view: PresenterToViewMoviesListProtocol?

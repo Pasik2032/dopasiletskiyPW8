@@ -15,6 +15,10 @@ class MoviesListViewController: UIViewController {
         super.viewDidLoad()
         configureUI()
         view.backgroundColor = .orange
+        DispatchQueue.global(qos: .background).async { [weak self] in
+            self?.presenter?.startApp()
+        }
+         
     }
 
     // MARK: - Properties

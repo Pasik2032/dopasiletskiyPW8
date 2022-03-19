@@ -11,7 +11,7 @@ import Foundation
 
 // MARK: View Output (Presenter -> View)
 protocol PresenterToViewMoviesListProtocol {
-
+    
 }
 
 
@@ -21,6 +21,7 @@ protocol ViewToPresenterMoviesListProtocol {
     var view: PresenterToViewMoviesListProtocol? { get set }
     var interactor: PresenterToInteractorMoviesListProtocol? { get set }
     var router: PresenterToRouterMoviesListProtocol? { get set }
+    func startApp()
 }
 
 
@@ -28,6 +29,8 @@ protocol ViewToPresenterMoviesListProtocol {
 protocol PresenterToInteractorMoviesListProtocol {
     
     var presenter: InteractorToPresenterMoviesListProtocol? { get set }
+    
+    func loadMovies()
 }
 
 
